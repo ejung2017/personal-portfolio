@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    margin: 0;
+    background: white;
+    color: white;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: Tahoma, sans-serif;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.logo {
+    order: 1;
+}
+.logo img {
+    height: 50px;
+    width: auto;
+}
+h1 {
+    order: 2;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: Tahoma, sans-serif;
+}
+nav {
+    order: 3;
+}
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    font-weight: bold;
+}
+nav a:hover {
+    color: #00ff87;
+    text-decoration: underline;
+}
+
+
+/* main */
+main, body {
+    margin: 0;
+    padding: 0;
+}
+
+.gradient-banner,
+.photo-marquee {
+    width: 100%;
+    margin: 0;
+}
+
+.career {
+    padding: 20px;
+}
+
+section {
+    margin: 0px 20px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+
+.project {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 15px;
+}
+
+.project h2 {
+    margin-top: 0;
+}
+
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Banner */
+.gradient-banner {
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  position: relative;
+  overflow: hidden;
+  background-image: 
+    linear-gradient(60deg, #00ff87 30%, transparent 70%),
+    radial-gradient(circle at 30% 70%, #00b7eb 20%, transparent 60%),
+    linear-gradient(120deg, #0077b6 40%, transparent 80%);
+  background-size: 200% 200%, 150% 150%, 180% 180%;
+  animation: gradient-shift 10s ease-in-out infinite;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Improve readability */
+  z-index: 1;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.banner-content p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Photo marquee */
+.photo-marquee {
+  overflow: hidden;
+  width: 100%;
+  padding: 1.25rem 0;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.marquee {
+  position: relative;
+  width: 100%;
+  touch-action: pan-y;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  /* ensure the duplicated images are on one long row */
+  /* width: calc(200% + 1rem); */
+  width: fit-content;
+
+  /* uncomment this to make it animate */
+  /* animation: scroll-right 32s linear infinite; */
+}
+
+.marquee-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(8, 15, 25, 0.08);
+}
+
+/* Pause on hover/focus */
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Continuous left-to-right animation:
+   start shifted left by 50% (the duplicated set) and move right to 0 */
+@keyframes scroll-right {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .marquee-track img {
+    width: 220px;
+    height: 150px;
+  }
+  .banner {
+    padding: 3rem 1rem;
+  }
+}
+@media (max-width: 420px) {
+  .marquee-track img {
+    width: 160px;
+    height: 110px;
+  }
+  .banner h1 { font-size: 1.6rem; }
+}
+
+

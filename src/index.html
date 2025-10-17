@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Header component will be included here -->
+        <div class="header-content">
+            <a href="/" class="logo">
+                <img src="../src/img/logo2.png" alt="Logo">
+            </a>
+            <nav>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Career</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Banner -->
+        <section class="gradient-banner" role="region" aria-label="Dynamic gradient banner">
+            <div class="banner-content">
+                <h1>Eunah Jung</h1>
+                <p>Tech Enthusiast — Exploring AI/ML and Data-Driven Insights</p>
+            </div>
+        </section>
+
+        <!-- Photo marquee -->
+        <section class="photo-marquee" aria-label="Featured photos">
+            <div class="marquee" aria-hidden="false">
+                <div class="marquee-track">
+                    <img src="../src/img/childhood1.jpeg" alt="Project photo 1">
+                    <img src="../src/img/placeholder1.jpeg" alt="Project photo 2">
+                    <img src="../src/img/placeholder2.jpg" alt="Project photo 3">
+                    <img src="../src/img/placeholder3.png" alt="Project photo 4">
+                    <!-- duplicate set for seamless loop -->
+                    <img src="../src/img/childhood1.jpeg" alt="" aria-hidden="true">
+                    <img src="../src/img/placeholder1.jpeg" alt="" aria-hidden="true">
+                    <img src="../src/img/placeholder2.jpg" alt="" aria-hidden="true">
+                    <img src="../src/img/placeholder3.png" alt="" aria-hidden="true">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>This is a showcase of my work and projects.</p>
+            <!-- Additional content will be added here -->
+        </section>
+
+        <!-- Work Experience -->
+        <section id="career">
+            <h2>My Career</h2>
+            <p>This is a showcase of my work and projects.</p>
+            <!-- Additional content will be added here -->
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2>Personal Projects</h2>
+            <p>This is a showcase of my work and projects.</p>
+            <!-- Additional content will be added here -->
+        </section>
+
+        <!-- Contact me -->
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>This is a showcase of my work and projects.</p>
+            <!-- Additional content will be added here -->
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Footer component will be included here -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
