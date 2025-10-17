@@ -12,9 +12,7 @@ personal-portfolio
 │   │   └── styles.css      # Styles for the website
 │   ├── js
 │   │   └── main.js         # JavaScript for interactivity
-│   ├── components
-│   │   ├── header.html     # Header component
-│   │   └── footer.html     # Footer component
+│   ├── img                 # Assets 
 │   └── data
 │       └── projects.json    # Project data in JSON format
 ├── public
@@ -49,7 +47,3 @@ personal-portfolio
 ## Usage
 
 Customize the `projects.json` file to add your projects. Modify the `styles.css` file to change the appearance of the website. Use `main.js` to add any additional interactivity. 
-
-## License
-
-This project is licensed under the MIT License.
