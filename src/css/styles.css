@@ -2,7 +2,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: white;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: medium;
 }
 
 /* Header styles */
@@ -10,9 +12,10 @@ header {
     width: 100%;
     margin: 0;
     background: white;
-    color: white;
+    color: black;
     /* font-family: 'Roboto', sans-serif; */
-    font-family: Tahoma, sans-serif;
+    /* font-family: Tahoma, sans-serif; */
+    font-family: 'Cabinet Grotesk', sans-serif;
 }
 .header-content {
     display: flex;
@@ -34,7 +37,18 @@ h1 {
     font-size: 1.5rem;
     margin: 0 10px;
     /* font-family: 'Montserrat', sans-serif; */
-    font-family: Tahoma, sans-serif;
+    /* font-family: Tahoma, sans-serif; */
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: medium;
+}
+h2 {
+    order: 2;
+    font-size: 2rem;
+    margin: 0 10px;
+    /* font-family: 'Montserrat', sans-serif; */
+    /* font-family: Tahoma, sans-serif; */
+    font-family: 'Cabinet Grotesk', sans-serif;
+    font-weight: 300;
 }
 nav {
     order: 3;
@@ -49,11 +63,11 @@ nav a {
     text-decoration: none;
     font-size: 1.1rem;
     margin: 0 15px;
-    font-weight: bold;
+    font-weight: thin;
 }
 nav a:hover {
-    color: #00ff87;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 
@@ -61,16 +75,6 @@ nav a:hover {
 main, body {
     margin: 0;
     padding: 0;
-}
-
-.gradient-banner,
-.photo-marquee {
-    width: 100%;
-    margin: 0;
-}
-
-.career {
-    padding: 20px;
 }
 
 section {
@@ -81,21 +85,8 @@ section:last-child {
     margin-bottom: 0;
 }
 
-
-.project {
-    background: #ffffff;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    margin: 20px 0;
-    padding: 15px;
-}
-
-.project h2 {
-    margin-top: 0;
-}
-
 footer {
-    background: #35424a;
+    background: rgb(240, 240, 239);
     color: #ffffff;
     text-align: center;
     padding: 10px 0;
@@ -104,120 +95,125 @@ footer {
     width: 100%;
 }
 
-/* Banner */
-.gradient-banner {
-  width: 100%;
-  height: 400px; /* Adjust height as needed */
-  position: relative;
-  overflow: hidden;
-  background-image: 
-    linear-gradient(60deg, #00ff87 30%, transparent 70%),
-    radial-gradient(circle at 30% 70%, #00b7eb 20%, transparent 60%),
-    linear-gradient(120deg, #0077b6 40%, transparent 80%);
-  background-size: 200% 200%, 150% 150%, 180% 180%;
-  animation: gradient-shift 10s ease-in-out infinite;
-}
-
-.banner-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Improve readability */
-  z-index: 1;
-}
-
-.banner-content h1 {
-  font-size: 2.5rem;
-  margin: 0;
-  font-weight: bold;
-}
-
-.banner-content p {
-  font-size: 1.2rem;
-  margin: 10px 0 0;
-}
-
-@keyframes gradient-shift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Photo marquee */
-.photo-marquee {
-  overflow: hidden;
-  width: 100%;
-  padding: 1.25rem 0;
-  background: #fafafa;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-
-.marquee {
-  position: relative;
-  width: 100%;
-  touch-action: pan-y;
-}
-
-.marquee-track {
+/* Container to wrap photos + about */
+.content-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  /* padding: 2rem 1rem; */
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 1.75rem;
   align-items: center;
-  /* ensure the duplicated images are on one long row */
-  /* width: calc(200% + 1rem); */
-  width: fit-content;
-
-  /* uncomment this to make it animate */
-  /* animation: scroll-right 32s linear infinite; */
 }
 
-.marquee-track img {
-  width: 300px;
+.photo-content {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+  gap: 10px;
+  justify-content: center;
+  max-width: 460px;           /* 200 + 200 + 20 + padding */
+  margin: 0 auto;
+  /* padding: 10px 10px; */
+}
+
+.vsco {
+  display: contents;          /* Critical: removes <a> from layout */
+}
+
+.vsco img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.2s;
+}
+
+.vsco img:hover {
+  transform: scale(1.02);
+}
+
+/* ----- VSCO GALLERY BUTTON ----- */
+.vsco-btn {
+  display: block;
+  width: 100px;                     /* fits nicely under 2×200 px images */
+  margin: 30px auto 30px;              /* top gap + centered */
+  padding: 10px 10px;
+  background: #000;                 /* VSCO black */
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: thin;
+  font-size: 1rem;
+  border-radius: 20px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.vsco-btn:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+.profile img {
+  width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 50%;
+}
+
+.about {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 0;
+  display: flex;
+  gap: 5rem;                    /* smaller, responsive gap */
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+/* Left side: photo + name */
+.about-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
   flex-shrink: 0;
-  box-shadow: 0 6px 18px rgba(8, 15, 25, 0.08);
 }
 
-/* Pause on hover/focus */
-.marquee:hover .marquee-track,
-.marquee:focus-within .marquee-track {
-  animation-play-state: paused;
-}
-
-/* Continuous left-to-right animation:
-   start shifted left by 50% (the duplicated set) and move right to 0 */
-@keyframes scroll-right {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-}
-
-/* Responsive adjustments */
 @media (max-width: 800px) {
-  .marquee-track img {
-    width: 220px;
-    height: 150px;
+  .about {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
   }
-  .banner {
-    padding: 3rem 1rem;
-  }
-}
-@media (max-width: 420px) {
-  .marquee-track img {
-    width: 160px;
-    height: 110px;
-  }
-  .banner h1 { font-size: 1.6rem; }
+  .about-left { justify-content: center; }
+  .photo-content { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 }
 
+.my-name {
+  margin: 0;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #222;
+}
 
+/* Right side: text */
+.about-right {
+  flex: 1;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.icons {
+  width: 50px;
+  height: 50px;
+}
+
+.icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

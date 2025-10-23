@@ -27,18 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => console.error('Error fetching project data:', error));
     
-    const marquees = document.querySelectorAll('.marquee');
-    marquees.forEach(m => {
-        const track = m.querySelector('.marquee-track');
-        if (!track) return;
-        m.addEventListener('touchstart', () => {
-        track.style.animationPlayState = 'paused';
-        }, {passive: true});
-        m.addEventListener('touchend', () => {
-        track.style.animationPlayState = 'running';
-        }, {passive: true});
-        m.addEventListener('touchcancel', () => {
-        track.style.animationPlayState = 'running';
-        }, {passive: true});
-    });
 });
