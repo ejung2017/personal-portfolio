@@ -308,7 +308,7 @@ footer {
     text-align: center;
   }
   .about-left { justify-content: center; }
-  
+  .photo-content { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
   .experience {
     flex-direction: column;
     gap: 3rem;
