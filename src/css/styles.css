@@ -160,13 +160,14 @@ footer {
   border-radius: 50%;
 }
 
+/* About Section */
 .about {
   max-width: 1000px;
   width: 100%;
   margin: 0 auto;
   padding: 3rem 0;
   display: flex;
-  gap: 5rem;                    /* smaller, responsive gap */
+  gap: 5rem;
   align-items: flex-start;
   justify-content: space-between;
 }
@@ -177,17 +178,6 @@ footer {
   align-items: center;
   gap: 3rem;
   flex-shrink: 0;
-}
-
-@media (max-width: 800px) {
-  .about {
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-    text-align: center;
-  }
-  .about-left { justify-content: center; }
-  .photo-content { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 }
 
 .my-name {
@@ -207,13 +197,141 @@ footer {
   color: #444;
 }
 
-.icons {
-  width: 50px;
-  height: 50px;
+/* Work Experience */
+.work {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
 }
 
-.icons img {
-  width: 100%;
-  height: 100%;
+.work img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.experience {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0; */
+
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Split into two equal columns */
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0;
+  /* border: 1px solid #eee;
+  border-radius: 8px; */
+}
+
+.experience-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.experience-left img {
+  width: 60px;
+  height: 60px;
   object-fit: contain;
+  border-radius: 50%;
+}
+
+.company-name {
+  margin: 0;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.experience-right {
+  padding-left: 0; /* Optional spacing from the split */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.school {
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0; */
+
+
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Split into two equal columns */
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0;
+  /* border: 1px solid #eee;
+  border-radius: 8px; */
+}
+
+.school-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.school-left img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.school-name {
+  margin: 0;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+.school-right {
+  padding-left: 0; /* Optional spacing from the split */
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* Responsive Design (≤ 800px) */
+@media (max-width: 800px) {
+  .about {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+  .about-left { justify-content: center; }
+  
+  .experience {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+  .experience-left {
+    margin-bottom: 1rem;
+  }
+  .experience-right {
+    padding-left: 0;
+  }
+  
+  .education {
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    text-align: center;
+  }
+  .school-left {
+    margin-bottom: 1rem;
+  }
+  .school-right {
+    padding-left: 0;
+  }
 }
