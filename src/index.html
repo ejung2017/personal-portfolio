@@ -6,6 +6,7 @@
     <title>Eunah Jung</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Montserrat&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@1,2,3,4,5,6,7,8,9&display=swap">
 </head>
 <body>
@@ -18,9 +19,9 @@
             <!-- <h1>Eunah Jung</h1> -->
             <nav>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Career</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Connect</a></li>
             </nav>
         </div>
     </header>
@@ -28,25 +29,9 @@
     <main>
         <!-- Main components -->
 +       <div class="content-container">
-            <div class="photo-content">
-                <a class="vsco">
-                    <img src="../src/img/vsco/2E57916A-3EE6-403E-99F3-6650CBFA324B_1_105_c.jpeg" alt="photo1">
-                    <img src="../src/img/vsco/0097D759-2D7D-4953-B747-2615E3202829_1_105_c.jpeg" alt="photo2">
-                    <img src="../src/img/vsco/51963E79-0D5B-4724-A29E-DF9EA9F27D10_1_105_c.jpeg" alt="photo3">
-                    <img src="../src/img/vsco/84166BF4-15F3-4EE0-934D-73AECA2DB80D_1_105_c.jpeg" alt="photo4">
-                    <img src="../src/img/vsco/IMG_0379.JPG" alt="photo5">
-                    <img src="../src/img/vsco/978730EA-CAE1-41FD-970E-FA5FDACCDFA0_1_105_c.jpeg" alt="photo6">
-                </a>
-            </div>
-            <!-- BUTTON -->
-            <div>
-                <a href="https://vsco.co/enaeuah/gallery" target="_blank" class="vsco-btn">
-                    See More
-                </a>
-            </div>
 
             <!-- ABOUT -->
-            <div class="about">
+            <div id="about" class="about">
                 <div class="about-left">
                     <a href="/" class="profile">
                     <img src="../src/img/profile/EunahJung.jpg" alt="Eunah Jung">
@@ -61,7 +46,7 @@
             </div>
 
             <!-- Work Experience -->
-            <div class="work">
+            <div id="career" class="work">
                 <div class="experience">
                     <div class="experience-left">
                         <img src="../src/img/experience/teksystems.png" alt="work1">
@@ -94,7 +79,7 @@
 
 
             <!-- Education -->
-            <div class="education">
+            <div id="education" class="education">
                 <div class="school">
                     <div class="school-left">
                         <img src="../src/img/experience/hkulogo.jpg" alt="university">
@@ -112,19 +97,55 @@
             </div>
 
             <!-- PROJECTS -->
-            <!-- <div>
+            <div id="projects" class="projects-container">
                 <div class="projects">
-                    <img src="../src/img/experience/teksystems.png" alt="Job2">
-                    <img src="../src/img/experience/hkjc.png" alt="Job1">
-                    <img src="../src/img/experience/hkulogo.jpg" alt="University">
-                    <img src="../src/img/experience/chadwick.jpg" alt="School">
+                    <div class="project" data-popup-content="Detailed explanation for Project 1 goes here. This could include more context, technologies used, and outcomes.">
+                        <img src="../src/img/project1.jpg" alt="Project 1 Image">
+                        <h3>Project 1</h3>
+                        <p class="short-desc">A brief overview of Project 1.</p>
+                    </div>
+                    <div class="project" data-popup-content="Detailed explanation for Project 2 goes here. More details on its development and impact.">
+                        <img src="../src/img/project2.jpg" alt="Project 2 Image">
+                        <h3>Project 2</h3>
+                        <p class="short-desc">A brief overview of Project 2.</p>
+                    </div>
+                    <div class="project" data-popup-content="Detailed explanation for Project 3 goes here. In-depth look at its features and results.">
+                        <img src="../src/img/project3.jpg" alt="Project 3 Image">
+                        <h3>Project 3</h3>
+                        <p class="short-desc">A brief overview of Project 3.</p>
+                    </div>
                 </div>
-            </div> -->
-+       </div>
+            </div>
+
+            <!-- VSCO -->
+            <div class="photo-content">
+                <a class="vsco">
+                    <img src="../src/img/vsco/2E57916A-3EE6-403E-99F3-6650CBFA324B_1_105_c.jpeg" alt="photo1">
+                    <img src="../src/img/vsco/0097D759-2D7D-4953-B747-2615E3202829_1_105_c.jpeg" alt="photo2">
+                    <img src="../src/img/vsco/51963E79-0D5B-4724-A29E-DF9EA9F27D10_1_105_c.jpeg" alt="photo3">
+                    <img src="../src/img/vsco/84166BF4-15F3-4EE0-934D-73AECA2DB80D_1_105_c.jpeg" alt="photo4">
+                    <img src="../src/img/vsco/IMG_0379.JPG" alt="photo5">
+                    <img src="../src/img/vsco/978730EA-CAE1-41FD-970E-FA5FDACCDFA0_1_105_c.jpeg" alt="photo6">
+                </a>
+            </div>
+            <!-- BUTTON -->
+            <div>
+                <a href="https://vsco.co/enaeuah/gallery" target="_blank" class="vsco-btn">
+                    See More
+                </a>
+            </div>
+        </div>
     </main>
     
     <footer>
-        <!-- Footer component will be included here -->
+        <div class="footer-content">
+            <span class="email">jungeunah98@gmail.com</span>
+            <div class="social-icons">
+            <a href="https://www.linkedin.com/in/eunah-jung/" target="_blank" class="icon linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/ejung2017" target="_blank" class="icon github"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/jungeunah_" target="_blank" class="icon instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
