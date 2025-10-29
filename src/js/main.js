@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
 
       if (targetElement) {
-        const headerHeight = 80; // Match your header height + margin
+        const headerHeight = 90; // Match your header height + margin
         const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
         const offsetPosition = elementPosition - headerHeight;
 
